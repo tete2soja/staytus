@@ -61,10 +61,8 @@ $ ->
       notices.hide('fast')
     , 5000
 
-  $('.data-orderable-list').each ->
-    new Sortable(this,
-      group: 'omega'
-      handle: '.drag-handle'
+  sortabledata = document.getElementsByClassName('data-orderable-list')[0]
+  sortable = new Sortable(sortabledata,
       onUpdate: ->
         orderedIds = $.map($(this.el).find('.data-orderable-id'), (elem) ->
           $(elem).data 'orderable-id'
