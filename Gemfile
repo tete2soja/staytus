@@ -27,6 +27,7 @@ gem 'redcarpet'
 gem 'premailer'
 gem 'rack-custom-proxies'
 gem 'log_logins'
+gem 'http_accept_language'
 
 group :development, :test do
   gem 'annotate'

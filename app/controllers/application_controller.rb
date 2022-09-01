@@ -4,8 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   around_action :set_time_zone
   before_action :ensure_site
+  before_action :set_locale
 
   rescue_from Authie::Session::ValidityError, :with => :auth_session_error
+
+  private
+  def set_locale
+    I18n.locale = http_accept_language.compatible_language_from(I18n.available_locales)
+  end
 
   private
   def auth_session_error

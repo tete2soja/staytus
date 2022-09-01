@@ -1,0 +1,21 @@
+fr:
+  # You can add additional locale definitions in here if you need to
+  # override anything.
+  themes:
+    default:
+      footer:
+        history: "Historique"
+        homepage: "Page d'accueil"
+        privacy_policy: "Politique de confidentialité"
+        contact_us: "Contact"
+        powered_by: "Propulsé par"
+      history:
+        title: "Historique des problèmes et maintenances"
+        intro: "Cette page affiche l'ensemble actuel et passé des problèmes et maintenances."
+      last_updated: "dernières mises à jour"
+      maintenance: "Maintenance"
+      due_to_finish: "Date de fin"
+      due_to_start: "Date de début"
+      subscribe:
+        title: "Notifications"
+        intro: "Vous pouvez choisir de recevoir automatiquement un message lors d'un problème ou maintenance."
