@@ -26,7 +26,7 @@
         <% if site.privacy_policy_url.present? %>
         <li><a href='<%= site.privacy_policy_url %>'><%= t("themes.default.footer.privacy_policy", :default => 'Privacy Policy') %></a></li>
         <% end %>
-        <li><a href='mailto:<%= site.support_email %>'><%= t("themes.default.footer.contact_us", :default => 'Contact Us') %></a></li>
+        <li><a href='<%= site.support_email %>'><%= t("themes.default.footer.contact_us", :default => 'Contact Us') %></a></li>
       </ul>
       <p class='siteFooter__poweredBy'>
         <%= t("themes.default.footer.powered_by", :default => "Powered by") %> <a href='http://staytus.co'>Staytus</a>
