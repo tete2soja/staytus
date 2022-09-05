@@ -13,6 +13,7 @@ if File.exist?(Staytus::Config.theme_root)
   Rails.application.config.assets.paths << File.join(Staytus::Config.theme_root, 'assets', 'images')
   Rails.application.config.assets.paths << File.join(Staytus::Config.theme_root, 'assets', 'javascripts')
   Rails.application.config.assets.paths << File.join(Staytus::Config.theme_root, 'assets', 'stylesheets')
+  Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
   Rails.application.config.assets.precompile += ["#{Staytus::Config.theme_name}.css", "#{Staytus::Config.theme_name}.js"]
 end
 
