@@ -29,6 +29,7 @@ gem 'rack-custom-proxies'
 gem 'log_logins'
 gem 'http_accept_language'
 gem 'net-smtp'
+gem 'tzinfo-data'
 
 group :development, :test do
   gem 'annotate'
