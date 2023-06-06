@@ -1,13 +1,10 @@
 # Staytus
 
-![GitHub](https://img.shields.io/github/license/tete2soja/staytus?style=flat-square)
+![GitHub](https://img.shields.io/github/license/tete2soja/staytus?style=flat-square) ![Docker Pulls](https://img.shields.io/docker/pulls/nioupola/staytus) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/nioupola/staytus/latest)
 
 _Note: This project is a fork from the orignal work of adamcooke. This fork exists to apply some PR and fixes issues from the original one. I want to add some other features._
 
-Staytus is a complete solution for publishing the latest information about
-any issues with your web applications, networks or services. Along with
-absolutely beautiful public & admin interfaces, Staytus is a powerful tool for
-any organization with customers that rely on them to be online 24/7.
+Staytus is a complete solution for publishing the latest information about any issues with your web applications, networks or services. Along with absolutely beautiful public & admin interfaces, Staytus is a powerful tool for any organization with customers that rely on them to be online 24/7.
 
 * [Read the roadmap](https://github.com/tete2soja/staytus/blob/master/ROADMAP.md)
 * [Report a bug](https://github.com/tete2soja/staytus/issues/new?labels=bug)
@@ -71,6 +68,44 @@ $ bundle exec rake staytus:build staytus:upgrade
 
 Once you've done this, you should ensure you restart any Staytus processes which you have running.
 
+## Installation using Docker
+
+A docker image is available from Docker Hub. You need to use an external MariaDB database.
+
+If you want a quick start with default value, you can use the included `docker-compose.yml` file or copy/paste the following content:
+
+```yaml
+version: "3.8"
+services:
+  database:
+    image: yobasystems/alpine-mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: staytus
+      MYSQL_DATABASE: staytus
+      MYSQL_USER: staytus
+      MYSQL_PASSWORD: staytus
+    volumes:
+      - ./mysql:/var/lib/mysql
+  staytus:
+    image: staytus_dev
+    restart: unless-stopped
+    volumes:
+      - ./config/:/opt/staytus/persisted
+    environment:
+      DB_DATABASE: staytus
+      DB_USER: staytus
+      DB_PASSWORD: staytus
+      DB_HOST: database
+      STAYTUS_SMTP_HOSTNAME: 
+      STAYTUS_SMTP_PORT: 
+      STAYTUS_SMTP_USERNAME: 
+      STAYTUS_SMTP_PASSWORD: 
+    depends_on:
+      - database
+    ports:
+      - "127.0.0.1:5000:5000"
+```
+
 ## E-Mail Notifications
 
 All e-mail notifications are sent through a background worker process. This will be started automatically when you run the application using `procodile start`. If you don't do this, you can run jobs using `bundle exec rake jobs:work`.
@@ -90,5 +125,4 @@ Each time you edit the theme, you need to compile again all static assets using 
 * [Krystal Network](https://krystalstatus.uk/)
 * [Dial 9 Status Site](https://status.dial9.co.uk/)
 
-If you're running Staytus in the wild, let us know so we can
-add you to the list.
+If you're running Staytus in the wild, let us know so we can add you to the list.
