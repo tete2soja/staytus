@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cd /opt/staytus
 
 # Configure DB with random password, if not already configured
