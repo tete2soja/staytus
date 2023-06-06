@@ -87,7 +87,7 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
   staytus:
-    image: staytus_dev
+    image: nioupola/staytus:latest
     restart: unless-stopped
     volumes:
       - ./config/:/opt/staytus/persisted
