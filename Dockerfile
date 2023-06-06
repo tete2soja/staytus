@@ -12,4 +12,4 @@ RUN cd /opt/staytus && \
     bundle config set --local deployment 'true' && \
     bundle install
 
-ENTRYPOINT /opt/staytus/docker-start.sh
+ENTRYPOINT ["opt/staytus/docker-start.sh"]
