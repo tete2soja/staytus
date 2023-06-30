@@ -17,7 +17,7 @@ class Admin::SessionsController < Admin::BaseController
       user = User.authenticate(params[:email], params[:password], request.ip)
     end
     if user.is_a?(User)
-      self.current_user = user
+      create_auth_session(user)
       redirect_to admin_root_path
     else
       flash.now.alert = 'The email address and/or password entered was incorrect. Please check and try again.'

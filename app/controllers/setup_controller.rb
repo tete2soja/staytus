@@ -32,7 +32,7 @@ class SetupController < ApplicationController
       if @new_site.save
         ServiceStatus.create_defaults
         Service.create_defaults
-        self.current_user = User.first
+        create_auth_session(user)
         redirect_to admin_root_path, :notice => "You're all done! You can go ahead and explore! We've logged you in as the user you just created."
       else
         render 'step3'
