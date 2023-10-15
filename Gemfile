@@ -30,6 +30,7 @@ gem 'log_logins'
 gem 'http_accept_language'
 gem 'net-smtp'
 gem 'tzinfo-data'
+gem 'rake'
 
 group :development, :test do
   gem 'annotate'
