@@ -23,7 +23,7 @@ class Admin::ApiTokensController < Admin::BaseController
   end
 
   def update
-    if @api_token.update_attributes(safe_params)
+    if @api_token.update(safe_params)
       redirect_to admin_api_tokens_path, :notice => "#{@api_token.name} has been updated successfully."
     else
       render 'edit'

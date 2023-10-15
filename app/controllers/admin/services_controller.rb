@@ -23,7 +23,7 @@ class Admin::ServicesController < Admin::BaseController
   end
 
   def update
-    if @service.update_attributes(safe_params)
+    if @service.update(safe_params)
       redirect_to admin_services_path, :notice => "#{@service.name} has been updated successfully."
     else
       render 'edit'

@@ -23,7 +23,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def update
-    if @user.update_attributes(safe_params)
+    if @user.update(safe_params)
       redirect_to admin_users_path, :notice => "#{@user.name} has been updated successfully."
     else
       render 'edit'
