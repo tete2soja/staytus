@@ -32,8 +32,8 @@ class SetupController < ApplicationController
       if @new_site.save
         ServiceStatus.create_defaults
         Service.create_defaults
-        create_auth_session(user)
-        redirect_to admin_root_path, :notice => "You're all done! You can go ahead and explore! We've logged you in as the user you just created."
+        # create_auth_session(user)
+        redirect_to admin_login_path, :notice => "You're all done! You can go ahead and explore! Use the credentials you entered to login."
       else
         render 'step3'
       end
