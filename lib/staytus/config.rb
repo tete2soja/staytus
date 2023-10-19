@@ -13,13 +13,12 @@ module Staytus
       end
 
       def version
-        Staytus::VERSION
+        Staytus::Version
       end
 
       def demo?
         ENV['STAYTUS_DEMO'] == '1'
       end
-
     end
   end
 end

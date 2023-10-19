@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.1'
 gem 'mysql2'
 gem 'sass-rails'
 gem 'uglifier'
@@ -28,10 +28,8 @@ gem 'premailer'
 gem 'rack-custom-proxies'
 gem 'log_logins'
 gem 'http_accept_language'
+gem "net-http"
 gem 'net-smtp'
 gem 'tzinfo-data'
 gem 'rake'
-
-group :development, :test do
-  gem 'annotate'
-end
+gem 'annotate'

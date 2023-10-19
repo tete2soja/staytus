@@ -2,11 +2,11 @@
 #
 # Table name: subscriber_service_joins
 #
-#  id            :integer          not null, primary key
-#  subscriber_id :integer
-#  service_id    :integer
+#  id            :bigint           not null, primary key
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  service_id    :integer
+#  subscriber_id :integer
 #
 
 class SubscriberServiceJoin < ActiveRecord::Base
