@@ -17,6 +17,7 @@ else
   # TODO also copy themes back and forth too
 
   # If already configured, check if there are any migrations to run
+  bundle exec rake db:migrate
   bundle exec rake staytus:build staytus:upgrade
 fi
 

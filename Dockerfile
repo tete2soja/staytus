@@ -1,4 +1,4 @@
-FROM ruby:3.1-alpine
+FROM ruby:3.2-alpine
 LABEL org.opencontainers.image.vendor="Synoptik Labs"
 LABEL org.opencontainers.image.authors="nicolas.legall@synoptik-labs.com"
 LABEL org.opencontainers.image.title="Staytus"

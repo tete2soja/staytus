@@ -13,6 +13,6 @@ class CreateAuthieSessions < ActiveRecord::Migration[4.2]
      t.string :last_activity_ip, :last_activity_path
      t.string :user_agent
      t.timestamps :null => true
-    #end
+    end
   end
 end
