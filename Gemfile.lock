@@ -178,6 +178,7 @@ GEM
       net-smtp
     marcel (1.0.2)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.5)
     minitest (5.20.0)
     moonrope (2.0.2)
       deep_merge (~> 1.0)
@@ -202,6 +203,9 @@ GEM
       activerecord (>= 4.0.0)
       activesupport (>= 4.0.0)
     nio4r (2.7.0)
+    nokogiri (1.15.5)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     numerizer (0.1.1)
@@ -302,6 +306,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-linux
 
 DEPENDENCIES
   activevalidators
@@ -340,5 +345,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   2.2.5
-   
+   2.3.5
