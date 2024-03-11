@@ -83,7 +83,7 @@ GEM
       mail
       phony (~> 2.0)
       rake
-    addressable (2.8.5)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     annotate (3.2.0)
       activerecord (>= 3.2, < 8.0)
@@ -213,13 +213,13 @@ GEM
       racc (~> 1.4)
     numerizer (0.1.1)
     phony (2.20.9)
-    premailer (1.21.0)
+    premailer (1.23.0)
       addressable
       css_parser (>= 1.12.0)
       htmlentities (>= 4.0.0)
     psych (5.1.2)
       stringio
-    public_suffix (5.0.3)
+    public_suffix (5.0.4)
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
